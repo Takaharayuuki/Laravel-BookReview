@@ -18,12 +18,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/layout.css') }}" rel="stylesheet" >
+    <link href="{{ asset('css/utility.css') }}" rel="stylesheet">
 
     @yield('css')
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div id="app" class="bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark shadow-sm bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img class="navbar-logo" src="{{ asset('images/logo.png') }}" alt="ロゴ">
