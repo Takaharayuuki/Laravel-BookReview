@@ -26,6 +26,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
+                    <img class="navbar-logo" src="{{ asset('images/logo.png') }}" alt="ロゴ">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -74,9 +75,13 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="main">
             @yield('content')
         </main>
+
+        <footer class="footer p20">
+            <small class="copyright">Laravel Book Reviews 2019 copyright</small>
+        </footer>
     </div>
 </body>
 </html>
