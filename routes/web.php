@@ -10,10 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+use Illuminate\Routing\RouteGroup;
+
 Route::get('/', 'ReviewController@index')->name('index');
 
 Auth::routes();
 
-Route::get('/review', 'ReviewController@create')->name('create');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/review', 'ReviewController@create')->name('create');
+});
+
 
 Route::get('/home', 'HomeController@index')->name('home');
