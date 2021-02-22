@@ -15,6 +15,8 @@ use Illuminate\Routing\RouteGroup;
 
 Route::get('/', 'ReviewController@index')->name('index');
 
+Route::get('/show/{id}', 'ReviewController@show')->name('show');
+
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
